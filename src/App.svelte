@@ -1,30 +1,16 @@
-<script>
-	export let name;
+<script lang="ts">
+	let isBackground: boolean;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<div class="grid grid-cols-3 grid-flow-col gap-4">
+	<main class="col-span-1">
+		<div class="mockup-window border bg-base-300">
+			<div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+		</div>
+	</main>
+	<aside class="col-span-2">
+		<div class="mockup-window border bg-base-300">
+			<div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+		</div>
+	</aside>
+</div>
