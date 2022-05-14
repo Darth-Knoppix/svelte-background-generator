@@ -24,11 +24,20 @@ export function createFilterValueParts(values: { blurAmount: number, brightness:
 }
 
 export function hexToParts(hex, alpha) {
-  return {
-    r: parseInt(hex.slice(1, 3), 16),
-    g: parseInt(hex.slice(3, 5), 16),
-    b: parseInt(hex.slice(5, 7), 16),
-    a: alpha
+  try {
+    return {
+      r: parseInt(hex.slice(1, 3), 16),
+      g: parseInt(hex.slice(3, 5), 16),
+      b: parseInt(hex.slice(5, 7), 16),
+      a: alpha
+    }
+  } catch (e) {
+    return {
+      r: 0,
+      g: 0,
+      b: 0,
+      a: 1,
+    }
   }
 }
 

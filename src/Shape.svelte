@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ShapeName } from "./types";
-import { createFilterValue, hexToRGB } from "./utils";
+  import { createFilterValue, hexToRGB } from "./utils";
 
   export let type: ShapeName;
   export let opacity: number;
@@ -9,8 +9,6 @@ import { createFilterValue, hexToRGB } from "./utils";
   export let brightness: number;
 
   $: filterValue = createFilterValue({blurAmount, brightness})
-
-  
 </script>
 
 <div

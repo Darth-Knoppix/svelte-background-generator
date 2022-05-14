@@ -1,7 +1,7 @@
 <script lang="ts">
+	import type { ShapeName, PreviewBG } from "./types";
 	import Shape from "./Shape.svelte";
 	import Token from "./Token.svelte";
-	import type { ShapeName, PreviewBG } from "./types";
 	import { createFilterValue, createFilterValueParts, hexToRGB, hexToParts } from "./utils";
 
 	const supportedShapes: ShapeName[] = ['Square', 'Circle', 'Squircle', 'Hexagon', 'Heart']
@@ -42,6 +42,7 @@
 		});
 	}
 </script>
+
 
 <div class="grid grid-cols-5 grid-rows-5 grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
 	<!-- Preview -->
