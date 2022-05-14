@@ -44,7 +44,7 @@
 </script>
 
 
-<div class="grid grid-cols-5 grid-rows-5 grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
+<div class="md:grid md:grid-cols-5 md:grid-rows-5 md:grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
 	<!-- Preview -->
 	<aside class="col-span-2 row-span-5">
 		<div class="mockup-window border bg-base-300 shadow-lg h-full">
