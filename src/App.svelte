@@ -44,9 +44,9 @@
 </script>
 
 
-<div class="md:grid md:grid-cols-5 md:grid-rows-5 md:grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
+<div class="grid md:grid-cols-5 md:grid-rows-5 md:grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
 	<!-- Preview -->
-	<aside class="col-span-2 row-span-5">
+	<aside class="md:col-span-2 md:row-span-5">
 		<div class="mockup-window border bg-base-300 shadow-lg h-full">
 			<h2 class="text-xl absolute top-2.5 right-[40%]">Preview</h2>
 
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 
-				<div class="flex justify-between">
+				<div class="flex flex-col xl:flex-row md:justify-between">
 					<span class="mr-2">Shape</span>
 					<div class="btn-group">
 						{#each supportedShapes as shape}
@@ -85,7 +85,7 @@
 		</div>
 	</aside>
 	<!-- Controls -->
-	<main class="col-span-3 row-span-3">
+	<main class="md:col-span-3 md:row-span-3">
 		<div class="mockup-window border bg-base-300 shadow-lg h-full">
 			<div class="p-4 bg-base-200 h-full">
 				<h2 class="text-xl absolute top-2.5 right-[40%]">Attributes</h2>
@@ -111,7 +111,7 @@
 		</div>
 	</main>
 
-	<div class="mockup-code col-span-3 row-span-2">
+	<div class="mockup-code md:col-span-3 md:row-span-2">
 		<pre><code><span class="text-green-400">.my-background</span> &lbrace;</code></pre>
 		<pre><code class="ml-8">background-color: </code><code>rgba&lpar;<span class="text-purple-400">{colourObject.r}</span>, <span class="text-purple-400">{colourObject.g}</span>, <span class="text-purple-400">{colourObject.b}</span>, <span class="text-purple-400">{colourObject.a}</span>&rpar&semi;</code></pre>
 		<pre><code class="ml-8">-webkit-backdrop-filter: </code><code><Token parts={filterParts.blurValue} /> <Token parts={filterParts.brightnessValue} />&semi;</code></pre>
