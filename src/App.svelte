@@ -1,3 +1,4 @@
+<svelte:options customElement="bb-generator" />
 <script lang="ts">
 	import type { ShapeName, PreviewBG } from "./types";
 	import Shape from "./Shape.svelte";
@@ -29,7 +30,7 @@
 	function setPreview(shape: ShapeName) { return () => previewShape = shape; }
 	function setPreviewBG(bg: PreviewBG) { return () => previewBg = bg; }
 
-	function copyCSS() { 
+	function copyCSS() {
 		const fullRule = `.my-background {
 	background-color: ${colourValue};
 	-webkit-backdrop-filter: ${filterValue};
@@ -43,7 +44,7 @@
 	}
 </script>
 
-
+<div id="bb">
 <div class="grid md:grid-cols-5 md:grid-rows-5 md:grid-flow-col gap-4 p-4 bg-slate-800 rounded-xl">
 	<!-- Preview -->
 	<aside class="md:col-span-2 md:row-span-5">
@@ -81,7 +82,7 @@
 						brightness={brightness}
 					/>
 				</div>
-				
+
 		</div>
 	</aside>
 	<!-- Controls -->
@@ -94,15 +95,15 @@
 					<label for="blurField" class="text-right">Blur</label>
 					<input id="blurField" type="range" min="0" max="50" bind:value={blurAmount} class="range w-full" />
 					<input type="number" placeholder="0-50" class="input input-bordered input-xs w-20" bind:value={blurAmount} />
-				
+
 					<label for="colourField" class="text-right">Colour</label>
 					<input id="colourField" type="color" bind:value={colour} class="text w-full" />
 					<input type="text" placeholder="#0056d6" class="input input-bordered input-xs w-20" bind:value={colour} />
-					
+
 					<label for="opacityField" class="text-right">Opacity</label>
 					<input id="opacityField" type="range" min="0" max="100" bind:value={opacity} class="range w-full" />
 					<input type="text" placeholder="0-100" min="0" max="100" class="input input-bordered input-xs w-20" bind:value={opacity} />
-				
+
 					<label for="brightnessField" class="text-right">Brightness</label>
 					<input id="brightnessField" type="range" min="0" max="200" bind:value={brightness} class="range w-full" />
 					<input type="text" placeholder="0-200" class="input input-bordered input-xs w-20" bind:value={brightness} />
@@ -124,6 +125,7 @@
 		</button>
 	</div>
 </div>
+</div>
 
 <style>
 	.preview-dots {
@@ -135,7 +137,7 @@
 	.preview-grid {
 		background-image: linear-gradient(
 			45deg,
-			#a1a1a1 25%, 
+			#a1a1a1 25%,
 			transparent 25%,
 			transparent 75%,
 			#a1a1a1 75%
